@@ -1,3 +1,13 @@
+import Hero from "./abotSections/Hero";
+
+
+
 export default function About() {
- return <div>About</div>
+ return (
+    <section>
+    <Hero/>
+    </section>
+
+ )
+
 }
