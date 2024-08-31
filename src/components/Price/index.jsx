@@ -1,7 +1,3 @@
-
-
 export default function Price() {
-  return (
-    <div>Price</div>
-  )
+ return <div>Price</div>
 }
