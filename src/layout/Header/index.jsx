@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
-
+import React from 'react'
 
 export default function Header() {
-  
- return (
-  <header>header</header>
- )
+  return (
+    <div>Header</div>
+  )
 }
->>>>>>> 692ddd7be394a3e80585fb23c3bcfbc18aee0151
