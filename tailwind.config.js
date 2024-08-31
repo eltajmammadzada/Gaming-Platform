@@ -16,6 +16,10 @@ export default {
    container: {
     center: true,
    },
+   screens:{
+    "3xl":'2100px',
+    "4xl":'2600px'
+   }
   },
  },
  plugins: [],
