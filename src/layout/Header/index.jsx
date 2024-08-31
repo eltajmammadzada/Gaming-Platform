@@ -19,16 +19,16 @@ const Header = () => {
           <ul className="flex items-center gap-20	 text-sm">
 
               <Link to={"/"} className="text-white transition hover:text-gray-500/75" href="#"> Home </Link>
-              <Link to={"/"} className="text-white transition hover:text-gray-500/75" href="#"> About us </Link>
-              <Link to={"/"} className="text-white transition hover:text-gray-500/75" href="#"> Portfolio </Link>
-              <Link to={"/"} className="text-white transition hover:text-gray-500/75" href="#">News </Link>
-
+              <Link to={"/About"} className="text-white transition hover:text-gray-500/75" href="#"> About us </Link>
+              <Link to={"/services"} className="text-white transition hover:text-gray-500/75" href="#"> Services </Link>
+              <Link to={"/news"} className="text-white transition hover:text-gray-500/75" href="#">News </Link>
+              
           </ul>
         </nav>
 
         <div className="flex items-center gap-4">
           <div className="sm:flex sm:gap-4">
-        <Button variant="primary"> Contact us</Button>
+        <Button variant="primary" href='/news'> Contact us</Button>
 
           
           </div>
