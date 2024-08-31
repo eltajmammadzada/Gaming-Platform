@@ -8,6 +8,7 @@ export default function TrendItems({id,img,imgAlt,title,svg}) {
         <img src={svg} alt="fire" />
         <span className="text-2xl font-medium">{title}</span>
         </div>
+        
     </div>
   )
 }
