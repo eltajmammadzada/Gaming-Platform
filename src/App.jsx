@@ -1,13 +1,5 @@
-
-
 function App() {
-
-
-  return (
-    <>
-    Hello word
-    </>
-  )
+ return <>Hello word</>
 }
 
 export default App
