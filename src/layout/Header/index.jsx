@@ -28,7 +28,7 @@ const Header = () => {
 
         <div className="flex items-center gap-4">
           <div className="sm:flex sm:gap-4">
-        <Button variant="primary" href='/news'> Contact us</Button>
+        <Button variant="primary"  as='a' href='/contact'> Contact us</Button>
 
           
           </div>
