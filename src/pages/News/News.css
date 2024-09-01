@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.Header {
+    text-align: center;
+}
+
+.Header h2 {
+    font-size: 30px;
+}
+
+.Header input {
+    border-radius: 20px;
+    width: 30%;
+    padding: 10px;
+    background-color: black;
+    border: 2px solid;
+    margin-top: 10px;
+}
+
+.Header,
+.mainLeft1 p {
+    margin: 10px 0;
+}
+
+.mainLeft1 h2 {
+    font-size: 30px;
+}
+
+.mainLeft1 {
+    margin: 40px 10px;
+    border-bottom: 2px solid orange;
+}
+.left{
+    min-width: 250px;
+    max-width: 500px;
+}
+.Main {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap:40px;
+}
+
+/* ----------Main-rigth----------- */
+.mainRight {
+    font-size: 20px;
+}
+
+.mainRight>div {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.mainRight>div img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+.color1{
+    background-color:pink;
+}
+.color2{
+    background-color: blue;
+}
+.color3{
+    background-color:orangered;
+}
+.color5{
+    background-color:green;
+}
+.color7{
+    background-color:purple;
+}
+/* ------Footer---- */
+.mainFooter h2 {
+    font-size: 30px;
+    margin-left: 90px;
+}
+
+.mainFooter p {
+    margin-left: 90px;
+}
+
+.mainFooter>div {
+    margin: 40px auto;
+    border-radius: 20px;
+    border: 2px solid;
+    width: 85%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+
+.mainFooter input {
+    border-radius: 15px;
+    width: 300px;
+    padding: 10px;
+}
