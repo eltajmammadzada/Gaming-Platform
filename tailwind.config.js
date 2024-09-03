@@ -12,6 +12,7 @@ export default {
     Btngradient:
      'linear-gradient(92deg, #FA8305 2.08%, #FB9E3C 117.25%)',
      'hero': "url('/home/joy.png')",
+     'category':"url('/home/prod.png')"
    },
    container: {
     center: true,
