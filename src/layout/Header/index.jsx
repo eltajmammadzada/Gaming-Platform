@@ -12,8 +12,7 @@ const Header = () => {
        className="block text-white text-3xl font-extrabold	 "
        href="#"
       >
-       <span className="sr-only">home</span>
-       LOGO
+       <img src="/logo.png" alt="logo" className='w-[150px] h-[150px]' />
       </Link>
      </div>
 
