@@ -24,10 +24,10 @@ export default {
       '2xl': '6rem',
     },
    },
-   screens:{
-    "3xl":'2100px',
-    "4xl":'2600px'
-   }
+   screens: {
+    '3xl': '2100px',
+    '4xl': '2600px',
+   },
   },
  },
  plugins: [],
