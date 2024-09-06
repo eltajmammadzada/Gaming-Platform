@@ -1,4 +1,5 @@
-import CardsItems from "./CardsItems"
+import CardsItems from "./CardsItems.jsx";
+
 
 
 export default function Cards() {
@@ -19,7 +20,7 @@ export default function Cards() {
 },
 {
  id:3,
- color:' bg-purple-950' ,
+ color:'bg-purple-950' ,
  bgtext: 'Lorem ipsum',
  title: 'Lorem ipsum',
  text:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
@@ -27,15 +28,9 @@ export default function Cards() {
  ];
  return (
     <div className="flex items-center justify-between pt-8 gap-5">
-       {cards.map((card)=> (
-           <CardsItems
-               id={card.id}
-               color={card.color}
-               bgtext={card.bgtext}
-               title={card.title}
-               text={card.text}
-           />
-       ))}
+        {cards.map((cardss)=>(
+             <CardsItems text={cardss.text} color={cardss.color} bgtext={cardss.bgtext} key={cardss.id} title={cardss.title} />
+        ))}
     </div>
 
  ) 
