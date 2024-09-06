@@ -1,7 +1,3 @@
-
-
 export default function CompanyAbout() {
-  return (
-    <div>CompanyAbout</div>
-  )
+ return <div>CompanyAbout</div>
 }

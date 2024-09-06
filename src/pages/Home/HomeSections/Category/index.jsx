@@ -1,7 +1,3 @@
-
-
 export default function Category() {
-  return (
-    <section>Category</section>
-  )
+ return <section>Category</section>
 }
