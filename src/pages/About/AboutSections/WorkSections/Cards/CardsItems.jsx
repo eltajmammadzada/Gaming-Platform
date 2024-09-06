@@ -13,6 +13,7 @@
 // </div>
 //  )
 // }
+import PropTypes from 'prop-types'; // ES6
 
 
 export default function CardsItems({id, color, bgtext,title, text}) {
@@ -26,4 +27,10 @@ export default function CardsItems({id, color, bgtext,title, text}) {
        </div>
     )
    }
-   
+CardsItems.propTypes ={
+    id:PropTypes.string,
+    color:PropTypes.string,
+    bgtext:PropTypes.string,
+    title:PropTypes.string,
+    text:PropTypes.string
+}
