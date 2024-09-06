@@ -1,0 +1,140 @@
+/* Sections */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background-color: rgb(9, 9, 9);
+}
+/* section-1 */
+.mainS1{
+    /* background-color: antiquewhite; */
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+.mainS1>div{
+    width:350px;
+    height: 150px;
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+   
+}
+.icon{
+    font-size: 40px;
+}
+.mainS1>div:nth-child(2){
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+}
+
+
+/* -------Section 2,3,4,5------------------- */
+
+.FaPlayCircle{
+    font-size: 40px;
+    position: absolute;
+    left:220px;
+    top: 165px;
+}
+.secSome {
+    display:flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+    gap: 40px;
+
+}
+.right{
+    position: relative;
+}
+.left,.right{
+    min-width: 250px;
+    max-width: 470px;
+    margin: 0 auto;
+}
+.left h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.left p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+
+.right img {
+    width:500px;
+    height: 350px;
+}
+.FaCheck{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ----------Section6---------- */
+.header h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header p {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.main {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main>div {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 2px solid rgb(190, 14, 14);
+    padding: 20px;
+}
+
+.main>div:active {
+    border-color: blue;
+}
+
+.main>div:hover {
+    border-color: blue;
+}
+
+.main img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline;
+}
+
+.vizeh {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.vizeh>p {
+    margin-left: 100px;
+    color: yellow;
+}
