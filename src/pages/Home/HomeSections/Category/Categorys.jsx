@@ -27,20 +27,20 @@ export default function Categorys() {
    title: 'AR/VR Solutions',
   },
   {
-    id: 5,
-    img: '/home/dk.svg',
-    imgAlt: 'image',
-    title: 'AR/ VR design',
-   },
-   {
-    id: 6,
-    img: '/home/group.svg',
-    imgAlt: 'image',
-    title: 'AR/ VR design',
-   },
+   id: 5,
+   img: '/home/dk.svg',
+   imgAlt: 'image',
+   title: 'AR/ VR design',
+  },
+  {
+   id: 6,
+   img: '/home/group.svg',
+   imgAlt: 'image',
+   title: 'AR/ VR design',
+  },
  ]
  return (
-  <div className='grid grid-cols-12 gap-8 py-14'>
+  <div className="grid grid-cols-12 gap-8 py-14">
    {category.map((category) => (
     <CategoryChild
      key={category.id}

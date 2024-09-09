@@ -1,3 +1,11 @@
+import Hero from './Sections/Hero'
+import MainContent from './Sections/MainContent'
+
 export default function News() {
- return <div>News</div>
+ return (
+  <>
+   <Hero />
+   <MainContent />
+  </>
+ )
 }

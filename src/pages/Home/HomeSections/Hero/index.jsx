@@ -3,7 +3,7 @@ import Right from './Right'
 
 export default function Hero() {
  return (
-  <section className="grid lg:grid-cols-12 py-20">
+  <section className="grid lg:grid-cols-12 py-20 container">
    <Left />
    <Right />
   </section>

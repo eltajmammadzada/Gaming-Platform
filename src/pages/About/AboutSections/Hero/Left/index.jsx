@@ -1,13 +1,19 @@
 import Button from '../../../../../common/Button'
+import { Breadcrumb } from 'antd'
 export default function Left() {
  return (
   <div className="lg:col-span-5">
    <div className="text-white mt-[120px]">
-    <span className="text-sm">Home &gt; </span>
-    <span className="text-sm text-orange-400">
-     {' '}
-     About us{' '}
-    </span>
+    <Breadcrumb
+     items={[
+      {
+       title: 'Home',
+      },
+      {
+       title: 'About us',
+      },
+     ]}
+    />
     <div>
      <h1 className="font-bold text-[30px] leading-[54.15px] mt-10">
       Lorem Ipsum is simply <br />
