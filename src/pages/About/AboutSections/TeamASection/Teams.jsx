@@ -28,7 +28,7 @@ const team = [
 ]
 export default function Teams() {
   return (
-    <div className="grid container my-10 lg:grid-cols-4 md:grid-cols-2 grid-cols-12 justify-center items-center">
+    <div className="grid container my-10 gap-6 lg:grid-cols-4 md:grid-cols-2 grid-cols-12 justify-center items-center">
         {team.map((team)=>(
             <TeamItems name={team.name} work={team.work} key={team.id} img={team.img} />
         ))}
