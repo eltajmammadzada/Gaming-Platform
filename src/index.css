@@ -15,5 +15,8 @@ body {
     background-size: cover;
     background-position: center;
 
-  }
+}
+.ant-breadcrumb-separator {
+  @apply !text-white
+}
   
