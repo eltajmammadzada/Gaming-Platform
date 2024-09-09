@@ -32,10 +32,7 @@ export default function Button({
 }
 
 Button.propTypes = {
- children: PropTypes.oneOfType([
-  PropTypes.element,
-  PropTypes.string,
- ]),
+ children: PropTypes.node,
  variant: PropTypes.oneOf([
   'primary',
   'secondary',

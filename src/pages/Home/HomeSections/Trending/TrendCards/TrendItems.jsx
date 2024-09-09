@@ -38,7 +38,7 @@ export default function TrendItems({
 }
 
 TrendItems.propTypes = {
- id: PropTypes.string.isRequired,
+ id: PropTypes.string,
  img: PropTypes.string.isRequired,
  imgAlt: PropTypes.string.isRequired,
  title: PropTypes.string.isRequired,
