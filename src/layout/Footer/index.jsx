@@ -7,7 +7,7 @@ export default function Footer() {
         <FooterHeader />
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-10">
             <div className="flex flex-col gap-3">
-                <Link to={'/'} className="mb-4">Logo</Link>
+               <img width={100} src="/logo.png" alt="" />
                 <p className="text-base font-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             </div>
             <div className="flex flex-col gap-4">
@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
         </div>
         <div className="border-t border-t-white text-center">
-            <span className="block p-5">Copyright ® 2021 Lorem All rights Rcerved</span>
+            <span className="block p-5">Copyright ® 2021 Lorem All rights team CodeCrafters</span>
         </div>
     </footer>
  )
