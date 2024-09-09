@@ -1,7 +1,8 @@
 export default function TextRight() {
  return (
-  <div>
-   <h1 className="font-bold text-[30px] leading-[54.15px] mt-10">
+  <div className="mt-10">
+    <span>Lorem ipsum</span>
+   <h1 className="font-bold text-[30px] leading-[54.15px]">
     Lorem Ipsum is simply <br />
     dummy text of the printing salam <br />
     and.

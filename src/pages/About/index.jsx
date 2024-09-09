@@ -1,6 +1,7 @@
 import Hero from './AboutSections/Hero'
 import Cards from './AboutSections/WorkSections/Cards/Cards'
 import CardSection from './AboutSections/ThirdSections/CardSection'
+import Teams from './AboutSections/TeamASection/Teams'
 
 export default function About() {
  return (
@@ -8,6 +9,7 @@ export default function About() {
    <Hero />
    <Cards />
    <CardSection />
+   <Teams />
   </div>
  )
 }

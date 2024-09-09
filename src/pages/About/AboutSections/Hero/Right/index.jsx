@@ -2,7 +2,7 @@ import { Carousel } from 'antd'
 
 export default function Right() {
  return (
-  <div className="lg:col-span-7">
+  <div>
    <Carousel arrows infinite={false}>
     <div>
      <img src="/about/girl.png" />

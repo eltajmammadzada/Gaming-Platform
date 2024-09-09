@@ -28,7 +28,7 @@ const Header = () => {
          Home{' '}
         </Link>
         <Link
-         to={'/About'}
+         to={'/about'}
          className="text-white transition hover:text-gray-500/75"
          href="#"
         >

@@ -2,7 +2,7 @@ import Button from '../../../../../common/Button'
 import { Breadcrumb } from 'antd'
 export default function Left() {
  return (
-  <div className="lg:col-span-5">
+  <div>
    <div className="text-white mt-[120px]">
     <Breadcrumb
      items={[
