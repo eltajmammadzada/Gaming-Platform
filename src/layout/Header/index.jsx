@@ -3,7 +3,7 @@ import Button from '../../common/Button'
 
 const Header = () => {
  return (
-  <header className="bg-black">
+  <header className="bg-black container">
    <div className="mt-11">
     <div className="flex h-16 items-center justify-between">
      <div className="flex-1 md:flex md:items-center md:gap-12 ">

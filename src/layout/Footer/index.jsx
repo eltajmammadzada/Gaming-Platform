@@ -3,7 +3,7 @@ import FooterHeader from "./FooterHeader";
 
 export default function Footer() {
  return (
-    <footer>
+    <footer className="container">
         <FooterHeader />
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-10">
             <div className="flex flex-col gap-3">
