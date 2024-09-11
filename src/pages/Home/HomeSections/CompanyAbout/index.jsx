@@ -1,16 +1,37 @@
+import { useEffect, useState } from "react";
+
 export default function CompanyAbout() {
+    const [data,setData]=useState([])
+    useEffect(() => {
+       const fetchData = async () => {
+         try {
+           const response = await fetch('http://localhost:1337/api/home-section3s?populate=*'); 
+           const result = await response.json();
+           setData(result.data || []);
+         } catch (error) {
+           console.error('Error fetching data:', error);
+         }
+       };
+   
+       fetchData();
+     }, []);
+
+      const imgPath = data[0]?.attributes.photo.data.attributes.url;
+      const imgUrl = `http://localhost:1337${imgPath}`;
+
+     
+     const title = data[0]?.attributes.title;
+     const subtitle = data[0]?.attributes.subtitle;
+     const desc = data[0]?.attributes.desc;
  return (
   <section className="py-10 container">
    <h2 className="text-center lg:text-4xl md:text-3xl text-2xl max-w-[830px] mx-auto mb-8">
-    Lorem Ipsum is simply dummy text of the printing and
-    typesetting industry.
+   {title}
    </h2>
    <div>
-    <h3 className="text-3xl font-semibold">Lorem Ipsum</h3>
+    <h3 className="text-3xl font-semibold">{subtitle}</h3>
     <p className="text-base font-normal max-w-[530px] pt-8">
-     Lorem Ipsum is simply dummy text of the printing and
-     typesetting industry. Lorem Ipsum has been the
-     industry's standard dummy text ever since the 1500s,
+    {desc}
     </p>
    </div>
    <div className="relative mt-20">
@@ -18,8 +39,8 @@ export default function CompanyAbout() {
      <img src="/home/company-bg.png" alt="" />
     </div>
     <img
-     src="/home/company.png"
-     alt=""
+     src={imgUrl}
+     alt={title}
      className="w-full sticky z-20"
     />
    </div>

@@ -1,54 +1,35 @@
+import { useEffect, useState } from 'react';
 import CategoryChild from './CategoryChild'
 
 export default function Categorys() {
- const category = [
-  {
-   id: 1,
-   img: '/home/phone2.svg',
-   imgAlt: 'image',
-   title: 'Mobile Game Development',
-  },
-  {
-   id: 2,
-   img: '/home/pc1.svg',
-   imgAlt: 'image',
-   title: 'PC Game Development',
-  },
-  {
-   id: 3,
-   img: '/home/ps4.svg',
-   imgAlt: 'image',
-   title: 'PS4 Game Development',
-  },
-  {
-   id: 4,
-   img: '/home/vr.svg',
-   imgAlt: 'image',
-   title: 'AR/VR Solutions',
-  },
-  {
-   id: 5,
-   img: '/home/dk.svg',
-   imgAlt: 'image',
-   title: 'AR/ VR design',
-  },
-  {
-   id: 6,
-   img: '/home/group.svg',
-   imgAlt: 'image',
-   title: 'AR/ VR design',
-  },
- ]
+    const [data,setData]=useState([])
+    useEffect(() => {
+       const fetchData = async () => {
+         try {
+           const response = await fetch('http://localhost:1337/api/category-cards?populate=*'); 
+           const result = await response.json();
+           setData(result.data || []);
+         } catch (error) {
+           console.error('Error fetching data:', error);
+         }
+       };
+   
+       fetchData();
+     }, []);
  return (
   <div className="grid grid-cols-12 gap-8 py-14">
-   {category.map((category) => (
+   {data.map((category) => {
+        const imgPath = category.attributes.icon.data.attributes.url;
+        const imgUrl = `http://localhost:1337${imgPath}`;
+        return (
     <CategoryChild
      key={category.id}
-     img={category.img}
+     img={imgUrl}
      imgAlt={category.imgAlt}
-     title={category.title}
+     title={category.attributes.name}
     />
-   ))}
+        )
+})}
   </div>
  )
 }

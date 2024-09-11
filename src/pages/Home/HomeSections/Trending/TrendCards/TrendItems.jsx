@@ -8,7 +8,6 @@ export default function TrendItems({
  img,
  imgAlt,
  title,
- svg,
 }) {
  useEffect(() => {
   AOS.init({ duration: 1000 })
@@ -28,9 +27,9 @@ export default function TrendItems({
    />
    <div
     className="flex items-center justify-center gap-2"
-    data-aos="fade-left"
+    data-aos="fade-up"
    >
-    <img src={svg} alt="fire" />
+    <img src='/home/fire.svg' alt="fire" />
     <span className="text-2xl font-medium">{title}</span>
    </div>
   </div>
@@ -42,5 +41,4 @@ TrendItems.propTypes = {
  img: PropTypes.string.isRequired,
  imgAlt: PropTypes.string.isRequired,
  title: PropTypes.string.isRequired,
- svg: PropTypes.string.isRequired,
 }

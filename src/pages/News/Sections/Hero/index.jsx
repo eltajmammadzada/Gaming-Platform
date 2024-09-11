@@ -1,4 +1,4 @@
-import { Breadcrumb } from 'antd'
+import { Breadcrumb, Input } from 'antd'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -28,11 +28,9 @@ const Hero = () => {
     typesetting industry.
    </p>
    <div className="mt-6">
-    <input
-     type="text"
-     placeholder="Search"
-     className="p-2 bg-black text-white rounded-md w-1/2 max-w-md outline-none"
-    />
+    <div className='max-w-[60%] mx-auto'>
+    <Input placeholder='Serach' />
+    </div>
    </div>
   </section>
  )

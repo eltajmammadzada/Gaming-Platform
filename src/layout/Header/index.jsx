@@ -1,73 +1,67 @@
-import { Link } from 'react-router-dom'
-import Button from '../../common/Button'
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
- return (
-  <header className="bg-black container">
-   <div className="mt-11">
-    <div className="flex h-16 items-center justify-between">
-     <div className="flex-1 md:flex md:items-center md:gap-12 ">
-      <Link
-       to={'/'}
-       className="block text-white text-3xl font-extrabold	 "
-       href="#"
-      >
-       <img src="/logo.png" alt="logo" className='w-[150px] h-[150px]' />
-      </Link>
-     </div>
+    const [data,setData]=useState([])
+    const [open, setOpen] = useState(false);
+    const [scroll, setScroll] = useState(false);
 
-     <div className="md:flex md:items-center md:gap-12">
-      <nav aria-label="Global" className="hidden md:block">
-       <ul className="flex items-center gap-20	 text-sm">
-        <Link
-         to={'/'}
-         className="text-white transition hover:text-gray-500/75"
-         href="#"
-        >
-         {' '}
-         Home{' '}
-        </Link>
-        <Link
-         to={'/about'}
-         className="text-white transition hover:text-gray-500/75"
-         href="#"
-        >
-         {' '}
-         About us{' '}
-        </Link>
-        <Link
-         to={'/services'}
-         className="text-white transition hover:text-gray-500/75"
-         href="#"
-        >
-         {' '}
-         Services{' '}
-        </Link>
-        <Link
-         to={'/news'}
-         className="text-white transition hover:text-gray-500/75"
-         href="#"
-        >
-         News{' '}
-        </Link>
-       </ul>
-      </nav>
+    const toggleMenu = () => {
+        setOpen(!open);
+    };
 
-      <div className="flex items-center gap-4">
-       <div className="sm:flex sm:gap-4">
-        <Button variant="primary" as="a" href="/contact">
-         {' '}
-         Contact us
-        </Button>
-       </div>
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setScroll(true);
+            } else {
+                setScroll(false);
+            }
+        };
 
-       <div className="block md:hidden"></div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </header>
- )
-}
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
-export default Header
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('http://localhost:1337/api/navbars'); 
+            const result = await response.json();
+            setData(result.data); 
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
+      
+      
+    return (
+        <header className={`z-[100] sticky top-0 ${scroll ? 'bg-black' : 'bg-transparent'} transition-colors duration-300`}>
+            <div className="container flex items-center justify-between">
+                <Link to={'/'}>
+                    <img src="/logo.png" alt="logo" className="w-[100px] h-[100px]" />
+                </Link>
+                <button onClick={toggleMenu} className="lg:hidden md:hidden duration-200">Menu</button>
+                <ul className="lg:flex md:flex hidden gap-5">
+                    {data.map((nav)=>(
+                       <Link key={nav.attributes.id} to={nav.attributes.href}>{nav.attributes.link}</Link>
+                    ))}
+                </ul>
+                {open && (
+                    <ul className="flex lg:hidden md:hidden flex-col absolute top-[80px] left-0 z-10 h-screen py-6 px-6 bg-black w-full gap-5">
+                {data.map((nav)=>(
+                       <Link key={nav.attributes.id} to={nav.attributes.href}>{nav.attributes.link}</Link>
+                ))}
+                    </ul>
+                )}
+            </div>
+        </header>
+    );
+};
+
+export default Header;

@@ -23,10 +23,13 @@ export default function Footer() {
                 <span className="text-base font-normal">+908 89097 890</span>
             </div>
             <div className="flex lg:justify-end md:justify-end gap-5 justify-center lg:items-end md:items-end items-center">
-                <span className="bg-white p-5 rounded-full"><img src="/footer/facebook.svg" alt="" /></span>
-                <span className="bg-white p-5 rounded-full"><img src="/footer/instagram.svg" alt="" /></span>
-                <span className="bg-white p-5 rounded-full"><img src="/footer/linkedin.svg" alt="" /></span>
-                <span className="bg-white p-5 rounded-full"><img src="/footer/twitter.svg" alt="" /></span>
+               <span className="bg-white p-5 rounded-full"><Link to={'https://www.facebook.com/'}> <img src="/footer/facebook.svg" alt="" /></Link></span>
+               <span className="bg-white p-5 rounded-full"><Link to={'https://instagram.com'}><img src="/footer/instagram.svg" alt="" /></Link></span>
+               <span className="bg-white p-5 rounded-full"><Link to={'https://instagram.com'}><img src="/footer/linkedin.svg" alt="" /></Link></span>
+               <span className="bg-white p-5 rounded-full"><Link to={'https://instagram.com'}><img src="/footer/twitter.svg" alt="" /></Link></span>
+              
+                
+                
             </div>
         </div>
         <div className="border-t border-t-white text-center">

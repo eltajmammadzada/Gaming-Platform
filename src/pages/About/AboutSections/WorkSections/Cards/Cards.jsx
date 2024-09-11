@@ -28,7 +28,7 @@ export default function Cards() {
  return (
   <>
    <CardHeader />
-   <div className="flex items-center justify-between pt-8 gap-5 container">
+   <div className="grid lg:grid-cols-3 md:grid-cols-2 items-center justify-between pt-8 gap-5 container">
     {cards.map((cardss) => (
      <CardsItems
       text={cardss.text}

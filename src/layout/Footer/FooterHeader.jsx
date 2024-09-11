@@ -15,10 +15,12 @@ export default function FooterHeader() {
             We promise not to spam you! </p>
         </div>
         <div className="flex lg:justify-end justify-center items-center">
-        <div className="bg-white h-12 w-fit flex items-center justify-between pl-5 pr-1 rounded-lg">
+          <form>
+          <div className="bg-white h-12 w-fit flex items-center justify-between pl-5 pr-1 rounded-lg">
             <input type="text" placeholder="Enter email adress" className="bg-transparent outline-none text-black" />
             <Button variant="footer">Continue</Button>
         </div>
+          </form>
         </div>
     </div>
     </>

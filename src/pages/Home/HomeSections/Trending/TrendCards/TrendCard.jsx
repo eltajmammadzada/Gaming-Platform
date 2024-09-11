@@ -1,48 +1,36 @@
+import { useEffect, useState } from 'react'
 import TrendItems from './TrendItems'
 
 export default function TrendCard() {
- const trendCard = [
-  {
-   id: 1,
-   img: '/home/1.png',
-   imgAlt: 'one',
-   title: '40 Followers',
-   svg: '/home/fire.svg',
-  },
-  {
-   id: 2,
-   img: '/home/2.png',
-   imgAlt: 'one',
-   title: '40 Followers',
-   svg: '/home/fire.svg',
-  },
-  {
-   id: 3,
-   img: '/home/3.png',
-   imgAlt: 'one',
-   title: '40 Followers',
-   svg: '/home/fire.svg',
-  },
-  {
-   id: 4,
-   img: '/home/4.png',
-   imgAlt: 'one',
-   title: '40 Followers',
-   svg: '/home/fire.svg',
-  },
- ]
+ const [data,setData]=useState([])
+ useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:1337/api/tendings?populate=*'); 
+        const result = await response.json();
+        setData(result.data || []);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  
 
  return (
   <div className="grid grid-cols-12 gap-5">
-   {trendCard.map((card) => (
+   {data.map((card) => {
+    const imgPath = card.attributes.sekil.data.attributes.url;
+    const imgUrl = `http://localhost:1337${imgPath}`;
+    return (
     <TrendItems
-     key={card.id}
-     img={card.img}
-     imgAlt={card.imgAlt}
-     title={card.title}
-     svg={card.svg}
-    />
-   ))}
+     key={card.attributes.id}
+     img={imgUrl}
+     imgAlt={card.attributes.size}
+     title={card.attributes.size}
+    />)
+})}
   </div>
  )
 }

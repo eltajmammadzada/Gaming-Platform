@@ -16,13 +16,13 @@ export default function CategoryChild({
    <div className="flex flex-col justify-center items-center gap-6 max-w-[220px] max-h-[170px]">
     <div className="w-[65px] h-[65px] bg-white rounded-full flex items-center justify-center">
      <img
-      data-aos="fade-left"
+      data-aos="fade-up"
       src={img}
       alt={imgAlt}
       className="w-[30px] h-[30px]"
      />
     </div>
-    <span data-aos="fade-right">{title}</span>
+    <span data-aos="fade-up">{title}</span>
     <img
      src="/home/arrowright.svg"
      alt=""
