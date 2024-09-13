@@ -5,7 +5,7 @@ export default function CompanyAbout() {
     useEffect(() => {
        const fetchData = async () => {
          try {
-           const response = await fetch('http://localhost:1337/api/home-section3s?populate=*'); 
+           const response = await fetch('https://codecraftgame.onrender.com/api/home-section3s?populate=*'); 
            const result = await response.json();
            setData(result.data || []);
          } catch (error) {
@@ -17,7 +17,7 @@ export default function CompanyAbout() {
      }, []);
 
       const imgPath = data[0]?.attributes.photo.data.attributes.url;
-      const imgUrl = `http://localhost:1337${imgPath}`;
+      const imgUrl = `https://codecraftgame.onrender.com${imgPath}`;
 
      
      const title = data[0]?.attributes.title;

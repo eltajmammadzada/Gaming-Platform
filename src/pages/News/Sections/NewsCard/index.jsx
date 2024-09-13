@@ -10,7 +10,7 @@ const NewsCard = () => {
  useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:1337/api/news-cards?populate=*'); 
+        const response = await fetch('https://codecraftgame.onrender.com/api/news-cards?populate=*'); 
         const result = await response.json();
         setData(result.data || []);
       } catch (error) {
@@ -24,7 +24,7 @@ const NewsCard = () => {
     <>
       {data.map((card) => {
         const imgPath = card.attributes.img.data.attributes.url;
-        const imgUrl = `http://localhost:1337${imgPath}`;
+        const imgUrl = `https://codecraftgame.onrender.com${imgPath}`;
         return (
           <div key={card.id} className="bg-black rounded-md p-4 mb-6 flex flex-col">
             <div className="relative w-full h-72 mb-4">

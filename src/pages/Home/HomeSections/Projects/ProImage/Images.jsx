@@ -6,7 +6,7 @@ export default function CategoryIamges() {
     useEffect(() => {
        const fetchData = async () => {
          try {
-           const response = await fetch('http://localhost:1337/api/prosses?populate=*'); 
+           const response = await fetch('https://codecraftgame.onrender.com/api/prosses?populate=*'); 
            const result = await response.json();
            setData(result.data || []);
          } catch (error) {
@@ -22,7 +22,7 @@ export default function CategoryIamges() {
   <div className="grid grid-cols-12 gap-5 py-7">
 {data.map((card) => {
     const imgPath = card.attributes.img.data.attributes.url;
-    const imgUrl = `http://localhost:1337${imgPath}`;
+    const imgUrl = `https://codecraftgame.onrender.com${imgPath}`;
     return (
         <CategoryImage
      key={card.id}

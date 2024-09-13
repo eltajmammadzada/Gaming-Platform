@@ -28,7 +28,7 @@ const Header = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('http://localhost:1337/api/navbars'); 
+            const response = await fetch('https://codecraftgame.onrender.com/api/navbars'); 
             const result = await response.json();
             setData(result.data); 
           } catch (error) {

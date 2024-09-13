@@ -6,7 +6,7 @@ export default function Projects() {
     useEffect(() => {
        const fetchData = async () => {
          try {
-           const response = await fetch('http://localhost:1337/api/pro-headers'); 
+           const response = await fetch('https://codecraftgame.onrender.com/api/pro-headers'); 
            const result = await response.json();
            setData(result.data || []);
          } catch (error) {

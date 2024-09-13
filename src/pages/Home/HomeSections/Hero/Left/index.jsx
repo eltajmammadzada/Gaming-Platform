@@ -12,7 +12,7 @@ export default function Left() {
  useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:1337/api/home-heroes'); 
+        const response = await fetch('https://codecraftgame.onrender.com/api/home-heroes'); 
         const result = await response.json();
         setData(result.data || []);
       } catch (error) {

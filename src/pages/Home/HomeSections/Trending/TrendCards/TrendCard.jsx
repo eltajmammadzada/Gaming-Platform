@@ -6,7 +6,7 @@ export default function TrendCard() {
  useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:1337/api/tendings?populate=*'); 
+        const response = await fetch('https://codecraftgame.onrender.com/api/tendings?populate=*'); 
         const result = await response.json();
         setData(result.data || []);
       } catch (error) {
@@ -22,7 +22,7 @@ export default function TrendCard() {
   <div className="grid grid-cols-12 gap-5">
    {data.map((card) => {
     const imgPath = card.attributes.sekil.data.attributes.url;
-    const imgUrl = `http://localhost:1337${imgPath}`;
+    const imgUrl = `https://codecraftgame.onrender.com${imgPath}`;
     return (
     <TrendItems
      key={card.attributes.id}
